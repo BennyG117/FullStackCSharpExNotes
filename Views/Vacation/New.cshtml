@@ -1,0 +1,61 @@
+@* create view page *@
+
+@model Vacation
+
+<div class="container w-75 mx-auto">
+    <h1>New Post</h1>
+    <form asp-action="Vacation" asp-controller="Create" method="post" class="shadow p-3 rounded">
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Destination"></label>
+            <input asp-for="Destination" type="text" class="form-control"/>
+            <span asp-validation-for="Destination" class="text-danger font-weight-bold"></span>
+        </div>
+
+        @* //! UPDATE EVERYTHIING BELOW: =============================== *@
+        @* //! UPDATE EVERYTHIING BELOW: =============================== *@
+
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" type="text" class="form-control"/>
+            <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="ImageUrl"></label>
+            <input asp-for="ImageUrl" type="text" class="form-control"/>
+            <span asp-validation-for="ImageUrl" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Summer"></label>
+            <input asp-for="Summer" type="text" class="form-cehck-label"/>
+            <span asp-validation-for="Summer" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Spring"></label>
+            <input asp-for="Spring" type="text" class="form-cehck-label"/>
+            <span asp-validation-for="Spring" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Fall"></label>
+            <input asp-for="Fall" type="text" class="form-cehck-label"/>
+            <span asp-validation-for="Fall" class="text-danger font-weight-bold"></span>
+        </div>
+        @* section *@
+        <div class="mb-3">
+            <label asp-for="Winter"></label>
+            <input asp-for="Winter" type="text" class="form-cehck-label"/>
+            <span asp-validation-for="Winter" class="text-danger font-weight-bold"></span>
+        </div>
+
+    <button class="btn btn-outline-dark">Submit</button>
+
+    </form>
+
+
+</div>
+
