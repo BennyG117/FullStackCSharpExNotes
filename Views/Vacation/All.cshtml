@@ -1,2 +1,26 @@
 @* TEST IT ONCE LOG IN AND REG DONE! *@
-<h1>Hello, you've made it!</h1>
+@* <h1>Hello, you've made it!</h1> *@
+@model List<Vacation>
+
+@{
+    ViewData["Title"] = "Vacation Dashboard";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @ViewData["Title"]</h1>
+    @foreach (Vacation vacay in Model)
+    {
+        <div class="col.sm-4">
+            <div class="card shadow rounded mb-3">
+                <img src="@vacay.ImageUrl" alt="@vacay.Destination" class="card-img-top w-auto">
+                <div class="card-body">
+                    <p class="card-title">
+                        @* ERROR HERE: *@
+                        @vacay.Description - Vacation by: @vacay.Creator?.FirstName
+                    </p>
+                    <p>@vacay.Destination</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

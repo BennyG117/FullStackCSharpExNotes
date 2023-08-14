@@ -80,6 +80,9 @@ public class Vacation
 
     //! TBD - adding many to many - user to vacations linking
 
+
+// List<Vacation> vacations = db.Vacations.Include(v => v.Creator).ToList();
+
     // public List<UserPostLike> PostLikes {get; set;} = new List<UserPostLike>();
 
 }

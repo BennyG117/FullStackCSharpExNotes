@@ -31,7 +31,7 @@ public class VacationController : Controller
     [HttpGet("dashboard")]
     public IActionResult Index()
     {
-        List<Vacation> vacations = db.Vacations.ToList();
+    List<Vacation> vacations = db.Vacations.Include(v => v.Creator).ToList();        
         //passing vacations down to the view...
         return View("All", vacations);
     }
